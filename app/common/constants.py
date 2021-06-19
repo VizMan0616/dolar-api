@@ -19,6 +19,6 @@ def DOLLAR_URL():
     if now.hour > 9 and now.hour < 13:
         return f'https://monitordolarvzla.com/promedio-del-dolar-{str(now.day).zfill(2)}-{str(now.month).zfill(2)}-{now.year}-9-am/'
     if now.hour < 9:
-        return f'https://monitordolarvzla.com/promedio-del-dolar-{str((now.day-1)).zfill(2)}-{str(now.month).zfill(2)}-{now.year}-9-pm/'
+        return f'https://monitordolarvzla.com/promedio-del-dolar-{str((now.day-1)).zfill(2)}-{str(now.month).zfill(2)}-{now.year}-1-pm/'
 
     return f'https://monitordolarvzla.com/promedio-del-dolar-{str(now.day).zfill(2)}-{str(now.month).zfill(2)}-{now.year}-1-pm/'
