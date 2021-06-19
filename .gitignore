@@ -1,0 +1,7 @@
+venv/
+dolarapi.wpr
+app/__pycache__/
+app/common/__pycache__/
+app/common/Config.py
+app/resources/__pycache__/
+
