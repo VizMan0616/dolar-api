@@ -1,5 +1,6 @@
 venv/
 dolarapi.wpr
+__pycache__/
 app/__pycache__/
 app/common/__pycache__/
 app/common/Config.py
