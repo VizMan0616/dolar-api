@@ -37,14 +37,14 @@ It was built with a simple purpose, be used to easily fetch the value of the US 
 The basic URL to handle the API are:
 1. To see the value of US Dollar in VES:
   ```sh 
-    http://url/dollar 
+    https://usd-to-ves.herokuapp.com/dollar
   ```
 2. To convert a specific quantity of US Dollars in VES, giving it the paramenter ``` dollars=FLOAT_VALUE ```
   ```sh 
-    http://url/dollar?dollars=FLOAT_VALUE 
+    https://usd-to-ves.herokuapp.com/dollar?dollars=FLOAT_VALUE 
   ```
 3. To convert a specific quantity of VES in US Dollars, giving it the parameter ``` bolivars=FLOAT_VALUE ```
   ```sh 
-    http://url/bolivar?bolivars=FLOAT_VALUE 
+    https://usd-to-ves.herokuapp.com/bolivar?bolivars=FLOAT_VALUE 
   ```
   > Note: This argument is mandatory, if you don't provide it, I'll throw an error.
