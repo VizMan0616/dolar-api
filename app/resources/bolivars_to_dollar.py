@@ -9,8 +9,8 @@ class BolivarsDollar(Resource):
     def get(self):
         parser = reqparse.RequestParser()
         parser.add_argument(
-            'bolivars', type=float, help='Se requiere la cantidades de bolivares a convertir', required=True)
+            'ves', type=float, help='Se requiere la cantidades de bolivares a convertir', required=True)
 
         args = parser.parse_args()
 
-        return DollarModel(dollar=bolivars_to_bucks(args['bolivars']), bolivar=args['bolivars'])
+        return DollarModel(usd=ves_to_usd(args['ves']), ves=args['ves'])

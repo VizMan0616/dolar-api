@@ -1,22 +1,23 @@
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
-from ..common.constants import DOLLAR_URL
+from ..common.constants import USD_URL
 from re import search
 
 
-def one_dollar_to_bolivar():
-    dollar_page = urlopen(DOLLAR_URL())
-    soup = BeautifulSoup(dollar_page, 'html.parser')
+def one_usd_to_ves():
+    monitor_page = urlopen(USD_URL())
+    soup = BeautifulSoup(monitor_page, 'html.parser')
 
-    dollar_text = soup.find('div', attrs={'class': 'entry-content'})
-    return float(search('([0-9]*[.,][0-9]*)+', dollar_text.text.strip()).group().replace('.', '').replace(',', '.'))
+    monitor_text = soup.find('div', attrs={'class': 'entry-content'})
 
-
-def bucks_to_bolivar(dollar_quantity: float) -> float:
-    return round((one_dollar_to_bolivar() * dollar_quantity), 2)
+    return float(search('([0-9]*[.,][0-9]*)+', monitor_text.text.strip()).group().replace('.', '').replace(',', '.'))
 
 
-def bolivars_to_bucks(bolivar_quantity: float) -> float:
-    return round((bolivar_quantity / one_dollar_to_bolivar()), 2)
+def usd_to_ves(usd: float) -> float:
+    return round((one_usd_to_ves() * usd), 2)
+
+
+def ves_to_usd(ves: float) -> float:
+    return round((ves / one_usd_to_ves()), 2)
 
 

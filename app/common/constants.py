@@ -2,13 +2,13 @@ from flask_restful import fields
 from datetime import datetime, timedelta
 
 RESOURCE_FIELDS = {
-    'dollar_quantity': fields.Float,
-    'bolivar_quantity': fields.Float,
-    'date_asked': fields.DateTime
+    'usd': fields.Float,
+    'ves': fields.Float,
+    'date': fields.DateTime
 }
 
 
-def DOLLAR_URL():
+def USD_URL():
     now = datetime.utcnow() - timedelta(hours=4)
 
     if now.strftime('%A') == 'Saturday':
