@@ -1,5 +1,5 @@
 from flask_restful import fields
-from datetime import datetime
+from datetime import datetime, timedelta
 
 RESOURCE_FIELDS = {
     'dollar_quantity': fields.Float,
@@ -9,7 +9,7 @@ RESOURCE_FIELDS = {
 
 
 def DOLLAR_URL():
-    now = datetime.utcnow()
+    now = datetime.utcnow() - timedelta(hours=4)
 
     if now.strftime('%A') == 'Saturday':
         return f'https://monitordolarvzla.com/promedio-del-dolar-{str((now.day-1)).zfill(2)}-{str(now.month).zfill(2)}-{now.year}-1-pm/'
