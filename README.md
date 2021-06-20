@@ -39,12 +39,26 @@ The basic URL to handle the API are:
   ```sh 
     https://usd-to-ves.herokuapp.com/dollar
   ```
-2. To convert a specific quantity of US Dollars in VES, giving it the paramenter ``` dollars=FLOAT_VALUE ```
+  
+  
+2. To convert a specific quantity of US Dollars in VES, give it the paramenter ``` usd=FLOAT_VALUE ```
   ```sh 
-    https://usd-to-ves.herokuapp.com/dollar?dollars=FLOAT_VALUE 
+    https://usd-to-ves.herokuapp.com/dollar?usd=FLOAT_VALUE 
   ```
-3. To convert a specific quantity of VES in US Dollars, giving it the parameter ``` bolivars=FLOAT_VALUE ```
+  - or simply using json notation to send the parameter:
+  ```json 
+     {
+      'usd': FLOAT_VALUE
+     }
+  ```
+3. To convert a specific quantity of VES in US Dollars, give it the parameter ``` ves=FLOAT_VALUE ```
   ```sh 
-    https://usd-to-ves.herokuapp.com/bolivar?bolivars=FLOAT_VALUE 
+    https://usd-to-ves.herokuapp.com/bolivar?ves=FLOAT_VALUE 
   ```
-  > Note: This argument is mandatory, if you don't provide it, I'll throw an error.
+  - or simply using json notation to send the parameter:
+  ```json 
+     {
+      'ves': FLOAT_VALUE
+     }
+  ```
+  > Note: The ``` ves ``` argument is mandatory, if you don't provide it, I'll throw an error.
