@@ -9,7 +9,7 @@ RESOURCE_FIELDS = {
 
 
 def DOLLAR_URL():
-    now = datetime.now()
+    now = datetime.utcnow()
 
     if now.strftime('%A') == 'Saturday':
         return f'https://monitordolarvzla.com/promedio-del-dolar-{str((now.day-1)).zfill(2)}-{str(now.month).zfill(2)}-{now.year}-1-pm/'
